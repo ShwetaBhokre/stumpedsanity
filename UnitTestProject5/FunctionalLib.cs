@@ -44,7 +44,7 @@ namespace UnitTestProject5
 
         public static void WaitforElement(IWebDriver driver, string LocaterValue)
         {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(1));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromMinutes(10));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Id(LocaterValue)));
 
         }

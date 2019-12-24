@@ -157,9 +157,10 @@ namespace Stumped2
 
             driver.FindElement(By.Id("cookiebtn")).Click();
             Thread.Sleep(5000);
+            driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[1]")).Click();
 
 
-            driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[2]/div[2]/div/div[2]/span[2]")).Click();
+            /*driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[2]/div[2]/div/div[2]/span[2]")).Click();
             Thread.Sleep(2000);
 
             FunctionalLib.clickAction(driver, "identifierId", "Id");
@@ -174,9 +175,11 @@ namespace Stumped2
             FunctionalLib.TypeAction(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input", "xpath", "ppsi1234");
 
             driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(5000);*/
 
-            /*driver.FindElement(By.XPath("//*[@id='c1330d14-5a19-479b-b72b-e1c649a7fff6']/div/div[2]/div[2]/nav/ul/li[2]/a/span")).Click();
+     
+
+            driver.FindElement(By.XPath("//*[@id='c1330d14-5a19-479b-b72b-e1c649a7fff6']/div/div[2]/div[2]/nav/ul/li[2]/a/span")).Click();
             Thread.Sleep(2000);
 
 
@@ -194,7 +197,8 @@ namespace Stumped2
                 Thread.Sleep(1000);
 
                 driver.Navigate().Back();
-            }*/
+            }
+            driver.Quit();
 
         }
 
@@ -209,9 +213,10 @@ namespace Stumped2
 
             driver.FindElement(By.Id("cookiebtn")).Click();
             Thread.Sleep(5000);
+            driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[1]")).Click();
 
 
-            driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[2]/div[2]/div/div[2]/span[2]")).Click();
+            /*driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[2]/div[2]/div/div[2]/span[2]")).Click();
             Thread.Sleep(2000);
 
             FunctionalLib.clickAction(driver, "identifierId", "Id");
@@ -220,14 +225,16 @@ namespace Stumped2
 
             //click on nextbutton
             driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).Click();
-            Thread.Sleep(4000);
+            Thread.Sleep(5000);
 
             //pwdfield
             FunctionalLib.WaitforElement(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input");
+
             FunctionalLib.TypeAction(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input", "xpath", "ppsi1234");
+            
 
             driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(5000);*/
 
             driver.FindElement(By.XPath("/html/body/div[1]/header/section[1]/div/div[2]/div[2]/nav/ul/li[3]/a/span")).Click();
             Thread.Sleep(2000);
@@ -247,6 +254,7 @@ namespace Stumped2
 
                 driver.Navigate().Back();
             }
+            driver.Quit();
 
         }
 
@@ -262,8 +270,9 @@ namespace Stumped2
             driver.FindElement(By.Id("cookiebtn")).Click();
             Thread.Sleep(5000);
 
+            driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[1]")).Click();
 
-            driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[2]/div[2]/div/div[2]/span[2]")).Click();
+            /*driver.FindElement(By.XPath("/html/body/div[1]/footer/section/div[2]/div/div[2]/div[2]/div/div[2]/span[2]")).Click();
             Thread.Sleep(2000);
 
             FunctionalLib.clickAction(driver, "identifierId", "Id");
@@ -276,10 +285,12 @@ namespace Stumped2
 
             //pwdfield
             FunctionalLib.WaitforElement(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input");
+
+
             FunctionalLib.TypeAction(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input", "xpath", "ppsi1234");
 
             driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(5000);*/
 
             driver.FindElement(By.XPath("/html/body/div[1]/header/section[1]/div/div[2]/div[2]/nav/ul/li[4]/a/span")).Click();
             Thread.Sleep(2000);
@@ -299,6 +310,7 @@ namespace Stumped2
                 driver.Navigate().Back();
 
             }
+            driver.Quit();
         }
 
         [TestMethod]
@@ -341,7 +353,7 @@ namespace Stumped2
                             Console.WriteLine(link);
                         }
                     }
-
+                    driver.Quit();
                 }
 
             }
