@@ -223,6 +223,7 @@ namespace Stumped2
             Thread.Sleep(4000);
 
             //pwdfield
+            FunctionalLib.WaitforElement(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input");
             FunctionalLib.TypeAction(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input", "xpath", "ppsi1234");
 
             driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).Click();
@@ -274,6 +275,7 @@ namespace Stumped2
             Thread.Sleep(4000);
 
             //pwdfield
+            FunctionalLib.WaitforElement(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input");
             FunctionalLib.TypeAction(driver, "/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input", "xpath", "ppsi1234");
 
             driver.FindElement(By.XPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).Click();
