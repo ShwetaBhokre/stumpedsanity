@@ -31,6 +31,7 @@ namespace UnitTestProject5
             Actions action = new Actions(driver);
 
             action.MoveToElement(element).Perform();
+           
         }
 
         public static void MouseOver(IWebDriver driver, string LocaterValue)
@@ -49,11 +50,7 @@ namespace UnitTestProject5
 
         }
 
-        internal static void clickAction(IWebDriver driver, string v, object id)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public static void TypeAction(IWebDriver driver, string LocaterValue, string LocaterType, string Value)
         {
             if (LocaterType == "id")
@@ -68,16 +65,12 @@ namespace UnitTestProject5
             }
         }
 
-        internal static void clickAction(IWebDriver driver, string v)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void DragandDrop(IWebDriver driver, string LocaterValue)
+        
+        public static void DragandDrop(IWebDriver driver, string LocaterValue,int i,int j)
         {
             IWebElement element = driver.FindElement(By.XPath(LocaterValue));
             Actions move = new Actions(driver);
-            move.DragAndDropToOffset(element, 30, 0).Perform();
+            move.DragAndDropToOffset(element, i, j).Perform();
         }
 
         public static void Scrollto(IWebDriver driver, string LocatorValue)
@@ -87,14 +80,13 @@ namespace UnitTestProject5
             ((IJavaScriptExecutor)driver).ExecuteScript("window.scrollTo(document.body.scrollHeight, 0)");
             action3.MoveToElement(Uploadphotobutton1);
             action3.Perform();
-
-
             Uploadphotobutton1 = new WebDriverWait(driver, new TimeSpan(0, 1, 0))
                         .Until(driver1 => driver.FindElement(By.XPath(LocatorValue)));
             Uploadphotobutton1.Click();
             Thread.Sleep(5000);
         }
 
+                    
         public static string ReadDataExcel(int S, int i, int j)
         {
             excel.Application xlapp = new excel.Application();
@@ -113,5 +105,6 @@ namespace UnitTestProject5
             Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
             ss.SaveAsFile("D:\\ISLproject\\ScreenShots\\" + imgName + ".png");
         }
+
     }
 }

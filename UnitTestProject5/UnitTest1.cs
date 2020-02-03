@@ -9,6 +9,7 @@ using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 using System.Net;
 
+
 namespace Stumped2
 {
     class ImagesList
@@ -18,17 +19,18 @@ namespace Stumped2
     [TestClass]
     public class UnitTest1
     {
-        private IWebDriver driver;
+        public IWebDriver driver;
         private object extent;
+       
 
         [TestMethod]
         public void TestMethod1()
         {
+
             string imgName = DateTime.Now.ToString("dd/MM/yyyy-HH-mm-ss");
 
-            ExtentHtmlReporter reporter =  new ExtentHtmlReporter("C:\\Users\\shweta\\source\\Git\\stumpedsanity\\UnitTestProject5\\Reports\\Homepage" + imgName + "\\reports.html");
+            ExtentHtmlReporter reporter =  new ExtentHtmlReporter("./ReportsHomepage/reports.html");
             
-
             var extend = new ExtentReports();
 
             extend.AttachReporter(reporter);
@@ -37,6 +39,8 @@ namespace Stumped2
 
             IWebDriver driver = new ChromeDriver();
 
+            //driver.Manage().Timeouts().ImplicitWait.Add(TimeSpan.FromSeconds(60));
+          
             driver.Navigate().GoToUrl("https://www.sportsadda.com/");
 
             driver.Manage().Window.Maximize();
@@ -48,7 +52,7 @@ namespace Stumped2
             Thread.Sleep(2000);
   
             string handle = driver.CurrentWindowHandle;
-
+           
             FunctionalLib.MouseOver(driver, "/html/body/div[1]/div/myapp/section[4]/div/div/div/div[1]/div/section[1]/div/div/div[1]/div/a");
 
             for (int i = 2; i <= 4; i++)
@@ -172,7 +176,7 @@ namespace Stumped2
         {
             string imgName = DateTime.Now.ToString("dd/MM/yyyy-HH-mm-ss");
 
-            ExtentHtmlReporter reporter = new ExtentHtmlReporter("C:\\Users\\shweta\\source\\Git\\stumpedsanity\\UnitTestProject5\\Reports\\CricketHomepage" + imgName + "\\reports.html");
+            ExtentHtmlReporter reporter = new ExtentHtmlReporter("./ReportsCricket/reports.html");
 
             var extend = new ExtentReports();
 
@@ -285,7 +289,7 @@ namespace Stumped2
         {
             string imgName = DateTime.Now.ToString("dd/MM/yyyy-HH-mm-ss");
 
-            ExtentHtmlReporter reporter = new ExtentHtmlReporter("C:\\Users\\shweta\\source\\Git\\stumpedsanity\\UnitTestProject5\\Reports\\FootballHomepage" + imgName + "\\reports.html");
+            ExtentHtmlReporter reporter = new ExtentHtmlReporter("./ReportsFootball/reports.html");
 
             var extend = new ExtentReports();
 
@@ -396,7 +400,7 @@ namespace Stumped2
         {
             string imgName = DateTime.Now.ToString("dd/MM/yyyy-HH-mm-ss");
 
-            ExtentHtmlReporter reporter = new ExtentHtmlReporter("C:\\Users\\shweta\\source\\Git\\stumpedsanity\\UnitTestProject5\\Reports\\KabaddiHomepage" + imgName + "\\reports.html");
+            ExtentHtmlReporter reporter = new ExtentHtmlReporter("./ReportsKabaddi/reports.html");
 
             var extent = new ExtentReports();
             extent.AttachReporter(reporter);
@@ -502,7 +506,7 @@ namespace Stumped2
         {
             string imgName = DateTime.Now.ToString("dd/MM/yyyy-HH-mm-ss");
 
-            ExtentHtmlReporter reporter = new ExtentHtmlReporter("C:\\Users\\shweta\\source\\Git\\stumpedsanity\\UnitTestProject5\\Reports\\BrokenImage\\" + imgName + "\\reports.html");
+            ExtentHtmlReporter reporter = new ExtentHtmlReporter("./ReportsBrokenImage/reports.html");
 
             var extend = new ExtentReports();
 
@@ -553,8 +557,10 @@ namespace Stumped2
                 }
 
             }
-            
+           
         }
+       
+
     }
 }
 
